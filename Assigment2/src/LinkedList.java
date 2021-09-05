@@ -1,5 +1,5 @@
-// Sapir Moskovich - 322400227
-// Ron Soffer - 208569061
+// ספיר מוסקוביץ - 322400227
+// רון סופר - 208569061
 
 public class LinkedList {
     Node head;

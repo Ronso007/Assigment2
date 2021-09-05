@@ -1,5 +1,5 @@
-// Sapir Moskovich - 322400227
-// Ron Soffer - 208569061
+// ספיר מוסקוביץ - 322400227
+// רון סופר - 208569061
 
 import java.util.Scanner;
 
@@ -18,7 +18,7 @@ public class Main {
 
     private static int[] getArrayFromUser() {
         Scanner scanner = new Scanner(System.in);
-        int[] buildings = new int[8];
+        int[] buildings = new int[30];
 
         for (int i = 0; i < buildings.length; i++) {
             buildings[i] = scanner.nextInt();
