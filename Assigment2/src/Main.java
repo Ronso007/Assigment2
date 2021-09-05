@@ -1,18 +1,37 @@
-import java.util.LinkedList;
-import java.util.List;
+// Sapir Moskovich - 322400227
+// Ron Soffer - 208569061
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int[] buildings = new int[]{101,87,122,208,74,107,152,130};
+        int[] buildings = getArrayFromUser();
         int[] view = FindBuildingsView(buildings);
+        printArray(view);
+    }
+
+    private static void printArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+
+    private static int[] getArrayFromUser() {
+        Scanner scanner = new Scanner(System.in);
+        int[] buildings = new int[8];
+
+        for (int i = 0; i < buildings.length; i++) {
+            buildings[i] = scanner.nextInt();
+        }
+
+        return buildings;
     }
 
     static int[] FindBuildingsView(int[] buildings) {
         int[] output = new int[buildings.length];
 
-        LinkedList<Integer> stackList = new LinkedList<>();
+        LinkedList stackList = new LinkedList();
         for (int i = 0; i < buildings.length ;i++) {
-
             while (!stackList.isEmpty() && buildings[stackList.peek()] <= buildings[i]) {
                 stackList.pop();
             }
